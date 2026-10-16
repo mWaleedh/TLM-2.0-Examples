@@ -1,0 +1,9 @@
+@0 s Debug WRITE: Data = 0x12345678 | Global Address = 0x20 (Target 1) | Delay = 0 ns
+
+@0 s Blocking WRITE: Data = 0xaaaa | Global Address = 0x10 (Target 1) | Delay = 10 ns
+
+@10 ns Blocking WRITE: Data = 0xbbbb | Global Address = 0x115 (Target 2) | Delay = 10 ns
+
+@20 ns DMI READ: Data = 0xbb | Global Address = 0x115 (Target 2) | Delay = 1 ns
+
+@21 ns DMI WRITE: Data = 0xabcdef12 | Global Address = 0x115 (Target 2) | Delay = 1 ns

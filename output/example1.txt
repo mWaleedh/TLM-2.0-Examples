@@ -1,0 +1,63 @@
+@0 s WRITE: Address = 0x20 | Data = 0x20 | Delay = 10 ns
+
+@10 ns WRITE: Address = 0x24 | Data = 0x24 | Delay = 10 ns
+
+@20 ns WRITE: Address = 0x28 | Data = 0x28 | Delay = 10 ns
+
+@30 ns WRITE: Address = 0x2c | Data = 0x2c | Delay = 10 ns
+
+@40 ns WRITE: Address = 0x30 | Data = 0x30 | Delay = 10 ns
+
+@50 ns WRITE: Address = 0x34 | Data = 0x34 | Delay = 10 ns
+
+@60 ns WRITE: Address = 0x38 | Data = 0x38 | Delay = 10 ns
+
+@70 ns WRITE: Address = 0x3c | Data = 0x3c | Delay = 10 ns
+
+@80 ns WRITE: Address = 0x40 | Data = 0x40 | Delay = 10 ns
+
+@90 ns WRITE: Address = 0x44 | Data = 0x44 | Delay = 10 ns
+
+@100 ns WRITE: Address = 0x48 | Data = 0x48 | Delay = 10 ns
+
+@110 ns WRITE: Address = 0x4c | Data = 0x4c | Delay = 10 ns
+
+@120 ns WRITE: Address = 0x50 | Data = 0x50 | Delay = 10 ns
+
+@130 ns WRITE: Address = 0x54 | Data = 0x54 | Delay = 10 ns
+
+@140 ns WRITE: Address = 0x58 | Data = 0x58 | Delay = 10 ns
+
+@150 ns WRITE: Address = 0x5c | Data = 0x5c | Delay = 10 ns
+
+@160 ns READ: Address = 0x20 | Data = 0x20 | Delay = 10 ns
+
+@170 ns READ: Address = 0x24 | Data = 0x24 | Delay = 10 ns
+
+@180 ns READ: Address = 0x28 | Data = 0x28 | Delay = 10 ns
+
+@190 ns READ: Address = 0x2c | Data = 0x2c | Delay = 10 ns
+
+@200 ns READ: Address = 0x30 | Data = 0x30 | Delay = 10 ns
+
+@210 ns READ: Address = 0x34 | Data = 0x34 | Delay = 10 ns
+
+@220 ns READ: Address = 0x38 | Data = 0x38 | Delay = 10 ns
+
+@230 ns READ: Address = 0x3c | Data = 0x3c | Delay = 10 ns
+
+@240 ns READ: Address = 0x40 | Data = 0x40 | Delay = 10 ns
+
+@250 ns READ: Address = 0x44 | Data = 0x44 | Delay = 10 ns
+
+@260 ns READ: Address = 0x48 | Data = 0x48 | Delay = 10 ns
+
+@270 ns READ: Address = 0x4c | Data = 0x4c | Delay = 10 ns
+
+@280 ns READ: Address = 0x50 | Data = 0x50 | Delay = 10 ns
+
+@290 ns READ: Address = 0x54 | Data = 0x54 | Delay = 10 ns
+
+@300 ns READ: Address = 0x58 | Data = 0x58 | Delay = 10 ns
+
+@310 ns READ: Address = 0x5c | Data = 0x5c | Delay = 10 ns

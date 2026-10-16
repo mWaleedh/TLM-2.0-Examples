@@ -1,0 +1,10 @@
+@0 s Debug WRITE: Bytes Written = 4 | Data = 0xabcdef12 | Address = 0x10 | Delay = 0 ns
+
+@0 s Blocking READ: Data = 0xabcdef12 | Address = 0x10 | Delay = 10 ns
+
+@10 ns DMI WRITE: Data = 0x11223344 | Address = 0x20 | Delay = 1 ns
+
+@11 ns DMI READ: Data = 0x11223344 | Address = 0x20 | Delay = 1 ns
+
+Caught error: TLM_ADDRESS_ERROR_RESPONSE
+Response status: -2

@@ -1,0 +1,13 @@
+0 s Initiator-1 Debug WRITE: Data = 0x12345678 | Global Address = 0x20 (Target 1)
+
+@0 s Initiator-1 Blocking WRITE: Data = 0xaaaa | Global Address = 0x10 (Target 1)
+
+@0 s Initiator-1 DMI WRITE: Data = 0xabcdef12 | Global Address = 0x14 (Target 1)
+
+@0 s Initiator-2 Blocking WRITE: Data = 0x110 | Global Address = 0x110 (Target 2)
+
+@0 s Initiator-2 Blocking WRITE: Data = 0x114 | Global Address = 0x114 (Target 2)
+
+@0 s Initiator-2 Blocking WRITE: Data = 0x118 | Global Address = 0x118 (Target 2)
+
+@30 ns Initiator-2 Blocking WRITE: Data = 0x11c | Global Address = 0x11c (Target 2)
