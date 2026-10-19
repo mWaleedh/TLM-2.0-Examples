@@ -65,7 +65,7 @@ struct Initiator : sc_module {
             tlm_phase phase = BEGIN_REQ;
             delay = SC_ZERO_TIME;
             
-            cout << "@" << sc_time_stamp() << " Sending BEGIN_REQ for address 0x" << hex << trans->get_address() << endl << endl;
+            cout << "@" << sc_time_stamp() << " Initiator: Sending BEGIN_REQ for address 0x" << hex << trans->get_address() << endl << endl;
             
             tlm_sync_enum status = socket->nb_transport_fw(*trans, phase, delay);
 
@@ -94,16 +94,15 @@ struct Initiator : sc_module {
         }
 
         if (phase == END_REQ) {
-            cout << "@" << sc_time_stamp() << " Received END_REQ. Bus is free." << endl;
+            cout << "@" << sc_time_stamp() << " Initiator: Received END_REQ for 0x" << hex << trans.get_address() << dec << ". Bus is free" << endl << endl;
         } 
         else if (phase == BEGIN_RESP) {
-            cout << "@" << sc_time_stamp() << " Received BEGIN_RESP. Transaction successful." << endl;
+            cout << "@" << sc_time_stamp() << " Initiator: Received BEGIN_RESP for 0x" << hex << trans.get_address() << dec << ". Transaction successful" << endl << endl;
             
             // Send END_RESP to Target
             tlm_phase fw_phase = END_RESP;
             sc_time delay = SC_ZERO_TIME;
             
-            cout << "@" << sc_time_stamp() << " Sending END_RESP." << endl << endl;
             socket->nb_transport_fw(trans, fw_phase, delay);
 
             trans.release();    // Decrement reference count
@@ -178,6 +177,8 @@ struct Target : sc_module {
                     SC_REPORT_FATAL("TLM-2", "Illegal END_RESP received");
                 }
 
+                cout << "@" << sc_time_stamp() << " Target: Received END_RESP for 0x" << hex << trans.get_address() << dec << ". Closing transaction" << endl << endl;
+
                 trans.release();
                 n_trans--;
 
@@ -203,6 +204,8 @@ struct Target : sc_module {
 
             default:
                 if (phase == internal_ph) {
+                    cout << "@" << sc_time_stamp() << " Target: Performing memory operation for 0x" << hex << trans.get_address() << dec << endl << endl;
+
                     // Execute Read/Write
                     tlm_command cmd = trans.get_command();
                     uint64 addr = trans.get_address() / 4;
@@ -243,6 +246,8 @@ struct Target : sc_module {
         tlm_phase bw_phase = END_REQ;
         sc_time delay = sc_time(10, SC_NS); // Simulated delay
         
+        cout << "@" << sc_time_stamp() << " Target: Accepted request for 0x" << hex << trans.get_address() << dec << ". Sending END_REQ" << endl << endl;
+
         tlm_sync_enum status = socket->nb_transport_bw(trans, bw_phase, delay);
         if (status == TLM_COMPLETED) {
             trans.release();
@@ -260,6 +265,8 @@ struct Target : sc_module {
         tlm_phase bw_phase = BEGIN_RESP;
         sc_time delay = SC_ZERO_TIME;
         
+        cout << "@" << sc_time_stamp() << " Target: Sending BEGIN_RESP for 0x" << hex << trans.get_address() << dec << endl << endl;
+
         response_in_progress = true;
         socket->nb_transport_bw(trans, bw_phase, delay);
     }

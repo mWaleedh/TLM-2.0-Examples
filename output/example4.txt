@@ -1,0 +1,27 @@
+@0 s Initiator: Sending BEGIN_REQ for address 0x10
+
+@0 s Target: Accepted request for 0x10. Sending END_REQ
+
+@10 ns Initiator: Received END_REQ for 0x10. Bus is free
+
+@10 ns Initiator: Sending BEGIN_REQ for address 0x14
+
+@10 ns Target: Accepted request for 0x14. Sending END_REQ
+
+@20 ns Initiator: Received END_REQ for 0x14. Bus is free
+
+@30 ns Target: Performing memory operation for 0x10
+
+@30 ns Target: Sending BEGIN_RESP for 0x10
+
+@30 ns Initiator: Received BEGIN_RESP for 0x10. Transaction successful
+
+@30 ns Target: Received END_RESP for 0x10. Closing transaction
+
+@40 ns Target: Performing memory operation for 0x14
+
+@40 ns Target: Sending BEGIN_RESP for 0x14
+
+@40 ns Initiator: Received BEGIN_RESP for 0x14. Transaction successful
+
+@40 ns Target: Received END_RESP for 0x14. Closing transaction
